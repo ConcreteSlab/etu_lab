@@ -1,0 +1,2 @@
+D:\paradigma_project\etuLab4\Debug\etuLab4.exe
+D:\paradigma_project\etuLab4\Debug\etuLab4.pdb
