@@ -7,7 +7,7 @@
 
 void char_bubble_sort(char* begin, char* end) {							//пузырь
 	bool is_sorted = false;
-	end--;
+	end=end-1;
 	char swapper = '\0';
 	while (!is_sorted) {
 		is_sorted = true;
@@ -81,7 +81,7 @@ int main()
 	char_bubble_sort(carray, carray + ARRAY_SIZE);
 	cout << "Массив, отсортированный пузырьком: ";
 	cout << carray << endl;
-	cout << "Введите размер массива для сортировки:" << endl;
+	cout << "Введите размер массива для сортировки: " ;
 	int not_size = 0;
 	cin >> not_size;
 	while (not_size < 1) {
@@ -90,28 +90,20 @@ int main()
 		cout << endl << "Ошибка ввода, введите размер заново: ";
 		cin >> not_size;
 	}
-	char* not_array = new char[not_size];
-	for (int i = 0; i < not_size; i++) {
-		not_array[i] = '\0';
-	}
+	char* not_array = new char[not_size+1];
+	not_array[not_size] = 0;
+	
 
 	bool is_ready = false;
 	cout << "\nВведите массив: " << endl;
-	while (!is_ready) {
-		is_ready = true;
-		for (int i = 0; i < not_size; i++) {
-			cin >> not_array[i];
-			if (!not_array[i]) {
-				cout << "Ошибка ввода, введите массив заново:" << endl;
-				is_ready = false;
-				cin.clear();
-				cin.ignore(9876, '\n');
-				break;
-			}
-		}
+	
+	for (int i = 0; i < not_size; i++) {
+		cin >> not_array[i];
 	}
-	
+
+
 	slow_sort(not_array, not_array + not_size);
-	
+	cout << "Отсортированный массив: " << endl << not_array << endl;
+	system("pause");
 	return 0;
 }
