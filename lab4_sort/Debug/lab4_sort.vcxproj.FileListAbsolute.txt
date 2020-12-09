@@ -1,0 +1,2 @@
+D:\paradigma_project\etuLab4\lab4_sort\Debug\lab4_sort.exe
+D:\paradigma_project\etuLab4\lab4_sort\Debug\lab4_sort.pdb

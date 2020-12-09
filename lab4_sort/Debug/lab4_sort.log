@@ -1,0 +1,3 @@
+﻿  lab4_sort.cpp
+D:\paradigma_project\etuLab4\lab4_sort\lab4_sort.cpp(36,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  lab4_sort.vcxproj -> D:\paradigma_project\etuLab4\lab4_sort\Debug\lab4_sort.exe
