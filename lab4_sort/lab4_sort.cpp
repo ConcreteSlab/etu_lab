@@ -72,7 +72,7 @@ int main()
 {
 	using namespace std;
 	setlocale(0, "");
-	char carray[ARRAY_SIZE + 1]; carray[ARRAY_SIZE] = '\0';
+	char *carray = new char[ARRAY_SIZE + 1]; carray[ARRAY_SIZE] = '\0';
 	srand(time(0));
 	rand();																//почему то первый ранд всегда возвращает одно и то же значение, этим вызовом делаем первое задаваемое значение менее предсказуемым
 	randFill(carray, carray + ARRAY_SIZE, 65,122);
@@ -81,6 +81,8 @@ int main()
 	char_bubble_sort(carray, carray + ARRAY_SIZE);
 	cout << "Массив, отсортированный пузырьком: ";
 	cout << carray << endl;
+	delete carray;
+	
 	cout << "Введите размер массива для сортировки: " ;
 	int not_size = 0;
 	cin >> not_size;
